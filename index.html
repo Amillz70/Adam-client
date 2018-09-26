@@ -24,22 +24,47 @@
     <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
     <input type="submit" />
         </form>
+    <br>
+    <form id="sign-in-form">
+      <legend> Sign In! </legend>
+      <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+      <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+      <input type="submit" />
+         </form>
+      <br>
+      <form id="change-password-form" class="hidden">
+        <legend> Change Password? </legend>
+        <input required placeholder="Old Password" name="passwords[old]" type="password"/>
+        <input required placeholder="New Password" name="passwords[new]" type="password"/>
+        <input type="submit" />
+         </form>
         <br>
-         <form id="sign-in-form">
-           <legend> Sign In! </legend>
-           <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
-           <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
-           <input type="submit" />
-         </form>
-         <br>
-         <form id="change-password-form" class="hidden">
-           <legend> Change Password </legend>
-           <input required placeholder="Old Password" name="passwords[old]" type="password"/>
-           <input required placeholder="New Password" name="passwords[new]" type="password"/>
-           <input type="submit" />
-         </form>
-         <br>
         <button id="sign-out-button" class="hidden"> Sign Out </button>
+        <br>
+
+        <h1>The Game!</h1>
+        <div class="container">
+          <div class="row">
+            <div class="container-fluid tic-container">
+              <div class="row tic-row">
+                <div class="col-4 tic-box">1</div>
+                <div class="col-4 tic-box">2</div>
+                <div class="col-4 tic-box">3</div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box">4</div>
+                <div class="col-4 tic-box">5</div>
+                <div class="col-4 tic-box">6</div>
+              </div>
+              <div class="row tic-row">
+                <div class="col-4 tic-box">7</div>
+                <div class="col-4 tic-box">8</div>
+                <div class="col-4 tic-box">9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <br>
 </body>
 
 </html>
