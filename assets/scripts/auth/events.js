@@ -1,5 +1,6 @@
 'use strict'
-const getFormFields = require('../../../lib/get-form-fields.js'
+const getFormFields = require('../../../lib/get-form-fields.js')
+const api = require('./api.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -11,5 +12,5 @@ const onSignUp = function (event) {
 }
 
 module.exports = {
-onSignUp
+  onSignUp
 }

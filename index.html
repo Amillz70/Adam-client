@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Adam's Tic-Tac-Toe Game</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Adam's Tic-Tac-Toe Game</h1>
 
 
-      <form id="sign-up-form">
-              <legend> Sign Up! </legend>
-              <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
-              <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
-              <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
-              <input type="submit" />
+  <form id="sign-up-form">
+    <legend> Sign Up! </legend>
+    <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+    <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+    <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+    <input type="submit" />
+        </form>
+
+    <form id="sign-in-form">
+      <legend> Sign In </legend>
+      <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+      <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+      <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+      <input type="submit" />
           </form>
-    </body>
+      <form id="sign-out-form">
+        <legend> Sign Out </legend>
+        <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+        <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+        <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+        <input type="submit" />
+            </form>
+
+        <form id="change-password">
+          <legend> Change Password? </legend>
+          <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+          <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+          <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+          <input type="submit" />
+              </form>
+</body>
+
 </html>
