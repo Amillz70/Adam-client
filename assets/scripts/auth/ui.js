@@ -16,6 +16,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
+//  $('#squareZero').html('Sign in successful, Game start')
   $('#display-message').html('Sign in successful')
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
@@ -57,6 +58,8 @@ const signOutFailure = function () {
   $('#display-message').html('Something went wrong, please try again')
   $('#display-message').css('color', 'red')
 }
+
+
 
 module.exports = {
   signUpSuccess,
