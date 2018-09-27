@@ -58,10 +58,6 @@ const signOutFailure = function () {
   $('#display-message').css('color', 'red')
 }
 
-const gameStart {
-
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
