@@ -21,4 +21,6 @@ $(() => {
   $('#boxSix').on('click', () => { authEvents.onClickBox(6) })
   $('#boxSeven').on('click', () => { authEvents.onClickBox(7) })
   $('#boxEight').on('click', () => { authEvents.onClickBox(8) })
+
+
 })
