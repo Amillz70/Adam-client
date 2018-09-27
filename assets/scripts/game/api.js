@@ -1,11 +1,13 @@
-const onClickBoxZero = function (userData) {
+const config = require('../config.js')
+
+const clickBoxZero = function (userData) {
   return $.ajax({
-    url: config.apiUrl + '/',
+    url: config.apiUrl + '/games/:id',
     method: 'POST',
     data: userData
   })
 }
 
 module.exports = {
-onClickBoxZero
+  clickBoxZero
 }
