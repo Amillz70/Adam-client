@@ -58,6 +58,18 @@ const signOutFailure = function () {
   $('#display-message').css('color', 'red')
 }
 
+const newGameStart = function () {
+  $('#display-message').html('New Game!')
+}
+
+const oddMove = function () {
+  $('display-message').html('Xs move')
+}
+
+const evenMove = function () {
+  $('display-message').html('Os move')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -66,5 +78,8 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newGameStart,
+  oddMove,
+  evenMove
 }

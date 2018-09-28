@@ -19,7 +19,6 @@ const signIn = function (userData) {
 }
 
 const changePassword = function (passwordData) {
-  console.log(passwordData)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     headers: {
@@ -41,10 +40,13 @@ const signOut = function () {
 }
 
 const onClickBoxZero = function (b0) {
-  return $.ajax ({
-    url: config.apiUrl + '/games/:id',
-    method: 'POST',
-    data:
+  return $.ajax({
+    url: config.apiUrl + '/games/${ID}',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: b0
   })
 }
 
@@ -52,6 +54,6 @@ module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
-  // onClickBoxZero
+  signOut,
+  onClickBoxZero
 }
