@@ -26,4 +26,6 @@ $(() => {
   // $('#create').on('click', authEvents.onSignIn)
   // $('#show').on('click', authEvents.onSignIn)
   // $('#update').on('click', authEvents.onSignIn)
+
+  $('#new-game').on('click', (authEvents.newGameButton))
 })

@@ -38,7 +38,8 @@ const onSignOut = function () {
 // Register click of individual boxes
 const onClickBoxZero = function (b0) {
   event.preventDefault()
-  api.onClickBox(b0)
+  // console.log('skjfh;aejhf')
+  api.onClickBoxZero(b0)
     .then(ui.clickBoxZero)
 }
 
@@ -90,6 +91,12 @@ const onClickBoxEight = function (b8) {
     .then(ui.clickBoxEight)
 }
 
+const newGameButton = function () {
+  event.preventDefault()
+    .then(ui.startNewGameSuccess)
+    .catch(ui.startNewGameFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -103,5 +110,6 @@ module.exports = {
   onClickBoxFive,
   onClickBoxSix,
   onClickBoxSeven,
-  onClickBoxEight
+  onClickBoxEight,
+  newGameButton
 }

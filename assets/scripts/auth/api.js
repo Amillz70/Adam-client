@@ -39,14 +39,203 @@ const signOut = function () {
   })
 }
 
-const onClickBoxZero = function (b0) {
+const onClickBoxZero = function (ID, INDEX, VALUE) {
   return $.ajax({
-    url: config.apiUrl + '/games/${ID}',
+    url: config.apiUrl + `/games/${ID}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
     method: 'PATCH',
-    data: b0
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxOne = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxTwo = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxThree = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxFour = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxFive = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxSix = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxSeven = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxEight = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
+  })
+}
+
+const onClickBoxNine = function (ID, INDEX, VALUE) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": false
+    }
+  }`
   })
 }
 
@@ -55,5 +244,14 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  onClickBoxZero
+  onClickBoxZero,
+  onClickBoxOne,
+  onClickBoxTwo,
+  onClickBoxThree,
+  onClickBoxFour,
+  onClickBoxFive,
+  onClickBoxSix,
+  onClickBoxSeven,
+  onClickBoxEight,
+  onClickBoxNine
 }

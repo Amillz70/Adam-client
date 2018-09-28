@@ -62,6 +62,10 @@ const newGameStart = function () {
   $('#display-message').html('New Game!')
 }
 
+const gameWinsTotal = function () {
+  $('#display-message').html('')
+}
+
 const oddMove = function () {
   $('display-message').html('Xs move')
 }
@@ -80,6 +84,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameStart,
+  gameWinsTotal,
   oddMove,
   evenMove
 }

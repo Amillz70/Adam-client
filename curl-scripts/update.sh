@@ -6,7 +6,7 @@ curl "https://tic-tac-toe-wdi.herokuapp.com/games/${ID}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
   "game": {
-        "id" : 836,
+        "id" : 1133,
     "cell": {
       "index": 0,
       "value": "x"
