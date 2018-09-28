@@ -45,49 +45,49 @@ const onClickBoxZero = function (b0) {
 
 const onClickBoxOne = function (b1) {
   event.preventDefault()
-  api.onClickBox(b1)
+  api.onClickBoxOne(b1)
     .then(ui.clickBoxOne)
 }
 
 const onClickBoxTwo = function (b2) {
   event.preventDefault()
-  api.onClickBox(b2)
+  api.onClickBoxTwo(b2)
     .then(ui.signOutTwo)
 }
 
 const onClickBoxThree = function (b3) {
   event.preventDefault()
-  api.onClickBox(b3)
+  api.onClickBoxThree(b3)
     .then(ui.signOutThree)
 }
 
 const onClickBoxFour = function (b4) {
   event.preventDefault()
-  api.onClickBox(b4)
+  api.onClickBoxFour(b4)
     .then(ui.clickBoxFour)
 }
 
 const onClickBoxFive = function (b5) {
   event.preventDefault()
-  api.onClickBox(b5)
+  api.onClickBoxFive(b5)
     .then(ui.clickBoxFive)
 }
 
 const onClickBoxSix = function (b6) {
   event.preventDefault()
-  api.onClickBox(b6)
+  api.onClickBoxSix(b6)
     .then(ui.clickBoxSix)
 }
 
 const onClickBoxSeven = function (b7) {
   event.preventDefault()
-  api.onClickBox(b7)
+  api.onClickBoxSeven(b7)
     .then(ui.clickBoxSeven)
 }
 
 const onClickBoxEight = function (b8) {
   event.preventDefault()
-  api.onClickBox(b8)
+  api.onClickBoxEight(b8)
     .then(ui.clickBoxEight)
 }
 
