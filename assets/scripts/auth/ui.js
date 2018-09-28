@@ -58,6 +58,10 @@ const signOutFailure = function () {
   $('#display-message').css('color', 'red')
 }
 
+const clickBoxZero = function () {
+  $('#display-message').html('X moved, Os turn')
+}
+
 const newGameStart = function () {
   $('#display-message').html('New Game!')
 }
@@ -86,5 +90,6 @@ module.exports = {
   newGameStart,
   gameWinsTotal,
   oddMove,
-  evenMove
+  evenMove,
+  clickBoxZero
 }

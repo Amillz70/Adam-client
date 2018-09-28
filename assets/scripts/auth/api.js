@@ -39,7 +39,7 @@ const signOut = function () {
   })
 }
 
-const onClickBoxZero = function (ID, INDEX, VALUE) {
+const onClickBoxZero = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -53,13 +53,13 @@ const onClickBoxZero = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxOne = function (ID, INDEX, VALUE) {
+const onClickBoxOne = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -73,13 +73,13 @@ const onClickBoxOne = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxTwo = function (ID, INDEX, VALUE) {
+const onClickBoxTwo = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -93,13 +93,13 @@ const onClickBoxTwo = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxThree = function (ID, INDEX, VALUE) {
+const onClickBoxThree = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -113,13 +113,13 @@ const onClickBoxThree = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxFour = function (ID, INDEX, VALUE) {
+const onClickBoxFour = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -133,13 +133,13 @@ const onClickBoxFour = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxFive = function (ID, INDEX, VALUE) {
+const onClickBoxFive = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -153,13 +153,13 @@ const onClickBoxFive = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxSix = function (ID, INDEX, VALUE) {
+const onClickBoxSix = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -173,13 +173,13 @@ const onClickBoxSix = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxSeven = function (ID, INDEX, VALUE) {
+const onClickBoxSeven = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -193,13 +193,13 @@ const onClickBoxSeven = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxEight = function (ID, INDEX, VALUE) {
+const onClickBoxEight = function (ID, INDEX, VALUE, OVER) {
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
@@ -213,30 +213,18 @@ const onClickBoxEight = function (ID, INDEX, VALUE) {
         "index": ${INDEX},
         "value": ${VALUE}
       },
-      "over": false
+      "over": ${OVER}
     }
   }`
   })
 }
 
-const onClickBoxNine = function (ID, INDEX, VALUE) {
-  return $.ajax({
-    url: config.apiUrl + `/games/${ID}`,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    },
-    method: 'PATCH',
-    data: `{
-    "game": {
-          "id" : ${ID},
-      "cell": {
-        "index": ${INDEX},
-        "value": ${VALUE}
-      },
-      "over": false
-    }
-  }`
-  })
+const startNewGameSuccess = function () {
+
+}
+
+const startNewGameFailure = function () {
+
 }
 
 module.exports = {
@@ -253,5 +241,6 @@ module.exports = {
   onClickBoxSix,
   onClickBoxSeven,
   onClickBoxEight,
-  onClickBoxNine
+  startNewGameSuccess,
+  startNewGameFailure
 }

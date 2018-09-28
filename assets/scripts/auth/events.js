@@ -36,58 +36,59 @@ const onSignOut = function () {
 }
 
 // Register click of individual boxes
-const onClickBoxZero = function (b0) {
+const onClickBoxZero = function () {
   event.preventDefault()
   // console.log('skjfh;aejhf')
-  api.onClickBoxZero(b0)
+  api.onClickBoxZero()
     .then(ui.clickBoxZero)
+    // .catch(ui.failClickZero)
 }
 
-const onClickBoxOne = function (b1) {
+const onClickBoxOne = function () {
   event.preventDefault()
-  api.onClickBoxOne(b1)
+  api.onClickBoxOne()
     .then(ui.clickBoxOne)
 }
 
-const onClickBoxTwo = function (b2) {
+const onClickBoxTwo = function () {
   event.preventDefault()
-  api.onClickBoxTwo(b2)
+  api.onClickBoxTwo()
     .then(ui.signOutTwo)
 }
 
-const onClickBoxThree = function (b3) {
+const onClickBoxThree = function () {
   event.preventDefault()
-  api.onClickBoxThree(b3)
+  api.onClickBoxThree()
     .then(ui.signOutThree)
 }
 
-const onClickBoxFour = function (b4) {
+const onClickBoxFour = function () {
   event.preventDefault()
-  api.onClickBoxFour(b4)
+  api.onClickBoxFour()
     .then(ui.clickBoxFour)
 }
 
-const onClickBoxFive = function (b5) {
+const onClickBoxFive = function () {
   event.preventDefault()
-  api.onClickBoxFive(b5)
+  api.onClickBoxFive()
     .then(ui.clickBoxFive)
 }
 
-const onClickBoxSix = function (b6) {
+const onClickBoxSix = function () {
   event.preventDefault()
-  api.onClickBoxSix(b6)
+  api.onClickBoxSix()
     .then(ui.clickBoxSix)
 }
 
-const onClickBoxSeven = function (b7) {
+const onClickBoxSeven = function () {
   event.preventDefault()
-  api.onClickBoxSeven(b7)
+  api.onClickBoxSeven()
     .then(ui.clickBoxSeven)
 }
 
-const onClickBoxEight = function (b8) {
+const onClickBoxEight = function () {
   event.preventDefault()
-  api.onClickBoxEight(b8)
+  api.onClickBoxEight()
     .then(ui.clickBoxEight)
 }
 
