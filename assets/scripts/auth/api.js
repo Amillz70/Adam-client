@@ -40,13 +40,13 @@ const signOut = function () {
   })
 }
 
-// const onClickBoxZero = function (b0) {
-//   return $.ajax ({
-//     // url: config.apiUrl + '/sign-in',
-//     method: 'POST',
-//     data:
-//   })
-// }
+const onClickBoxZero = function (b0) {
+  return $.ajax ({
+    url: config.apiUrl + '/games/:id',
+    method: 'POST',
+    data:
+  })
+}
 
 module.exports = {
   signUp,
