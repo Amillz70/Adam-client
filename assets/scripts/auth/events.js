@@ -99,7 +99,6 @@ const newGameButton = function () {
     // .catch(ui.startNewGameFailure)
 }
 
-
 module.exports = {
   onSignUp,
   onSignIn,
