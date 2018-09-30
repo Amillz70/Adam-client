@@ -19,7 +19,6 @@ const signIn = function (userData) {
 }
 
 const changePassword = function (passwordData) {
-  console.log(passwordData)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     headers: {
@@ -40,18 +39,213 @@ const signOut = function () {
   })
 }
 
-// const onClickBoxZero = function (b0) {
-//   return $.ajax ({
-//     // url: config.apiUrl + '/sign-in',
-//     method: 'POST',
-//     data:
-//   })
-// }
+const onClickBoxZero = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxOne = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxTwo = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxThree = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxFour = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxFive = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxSix = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxSeven = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const onClickBoxEight = function (ID, INDEX, VALUE, OVER) {
+  return $.ajax({
+    url: config.apiUrl + `/games/${ID}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'PATCH',
+    data: `{
+    "game": {
+          "id" : ${ID},
+      "cell": {
+        "index": ${INDEX},
+        "value": ${VALUE}
+      },
+      "over": ${OVER}
+    }
+  }`
+  })
+}
+
+const startNewGameSuccess = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    header:
+    {Authorization: `Token token=${store.user.token}`}
+  })
+}
+
+const startNewGameFailure = function () {
+
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
-  // onClickBoxZero
+  signOut,
+  onClickBoxZero,
+  onClickBoxOne,
+  onClickBoxTwo,
+  onClickBoxThree,
+  onClickBoxFour,
+  onClickBoxFive,
+  onClickBoxSix,
+  onClickBoxSeven,
+  onClickBoxEight,
+  startNewGameSuccess,
+  startNewGameFailure
 }
