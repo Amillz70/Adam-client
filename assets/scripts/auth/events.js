@@ -92,11 +92,13 @@ const onClickBoxEight = function () {
     .then(ui.clickBoxEight)
 }
 
+// Need to figure out how to make this hear to start new game
 const newGameButton = function () {
   event.preventDefault()
-    .then(ui.startNewGameSuccess)
-    .catch(ui.startNewGameFailure)
+    .then(ui.newGameStart)
+    // .catch(ui.startNewGameFailure)
 }
+
 
 module.exports = {
   onSignUp,

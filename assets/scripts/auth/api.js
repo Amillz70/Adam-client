@@ -220,7 +220,12 @@ const onClickBoxEight = function (ID, INDEX, VALUE, OVER) {
 }
 
 const startNewGameSuccess = function () {
-
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    header:
+    {Authorization: `Token token=${store.user.token}`}
+  })
 }
 
 const startNewGameFailure = function () {
