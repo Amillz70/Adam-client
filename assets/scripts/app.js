@@ -13,7 +13,6 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword) // .hide()
   $('#sign-out-button').on('click', authEvents.onSignOut) // .hide()
 
-<<<<<<< HEAD
   $('#squareZero').on('click', (authEvents.onClickBoxZero))
   $('#squareOne').on('click', (authEvents.onClickBoxOne))
   $('#squareTwo').on('click', (authEvents.onClickBoxTwo))
@@ -30,7 +29,6 @@ $(() => {
   // $('#update').on('click', authEvents.onSignIn)
 
   $('#new-game').on('click', (authEvents.newGameButton))
-=======
   $('#boxZero').on('click', () => { authEvents.onClickBox(0) })
   $('#boxOne').on('click', () => { authEvents.onClickBox(1) })
   $('#boxTwo').on('click', () => { authEvents.onClickBox(2) })
@@ -43,5 +41,4 @@ $(() => {
 
   // How to link game logic with html page
   $('#boxZero').on('click', () => { gameLogic.clickBox(0) })
->>>>>>> logic
 })
