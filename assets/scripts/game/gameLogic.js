@@ -1,5 +1,5 @@
 // Have constant variables needed for game
-// Need: users, turn, and amount of turns for each(1)
+
 // let game ={
 // let user1 = 'x'
 // const user2 = 'O'
@@ -17,12 +17,18 @@ const board = ['', '', '', '', '', '', '', '', '']
 
 let user1 = 'x'
 
-const playerSwitch = function() {
-if (user1 === 'x') {
-  user1 ='o'
-} else {
-  user1 ='x'
-}
+const playerSwitch = function (event) {
+  event.preventDefault()
+  console.log($(this))
+  console.log('user1 is ', user1)
+  if (user1 === 'x') {
+    $(this).text(user1)
+    user1 = 'o'
+  } else {
+    $(this).text(user1)
+    user1 = 'x'
+  }
+  return user1
 }
 
 // const gameWin = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
@@ -36,31 +42,39 @@ if (user1 === 'x') {
 //   }
 // }
 // Win for user1 or 'X'
-const gameWin = function() {
-  {
-if (board[0] !== '' && board[0] === board[1] === board[2]) {
-  return ('Winner is' + board[1])
-} else if (board[3] !== '' && board[3] === board[4] === board[5]) {
+const gameWin = function () {
+  if (board[0] !== '' && board[0] === board[1] === board[2]) {
+    return ('Winner is' + board[1])
+  } else if (board[3] !== '' && board[3] === board[4] === board[5]) {
     return ('Winner is' + board[3])
   } else if (board[6] !== '' && board[6] === board[7] === board[8]) {
     return ('Winner is' + board[6])
   } else if (board[0] !== '' && board[0] === board[4] === board[8]) {
     return ('Winner is' + board[0])
-} else if (board[2] !== '' && board[2] === board[4] === board[6]) {
-  return ('Winner is' + board[2])
-} else if (board[0] !== '' && board[0] === board[3] === board[6]) {
+  } else if (board[2] !== '' && board[2] === board[4] === board[6]) {
+    return ('Winner is' + board[2])
+  } else if (board[0] !== '' && board[0] === board[3] === board[6]) {
     return ('Winner is' + board[0])
-} else if (board[1] !== '' && board[1] === board[4] === board[7]) {
-      return ('Winner is' + board[1])
-} else if (board[2] !== '' && board[2] === board[5] === board[8]) {
-        return ('Winner is' + board[2]) }
-else{
-return 'Continue Playing'
+  } else if (board[1] !== '' && board[1] === board[4] === board[7]) {
+    return ('Winner is' + board[1])
+  } else if (board[2] !== '' && board[2] === board[5] === board[8]) {
+    return ('Winner is' + board[2])
+  } else if (board.length > 9) {
+    return 'Draw'
+  } else {
+    return 'Continue Playing'
+  }
 }
 
-// switch function
-
-
+// Clickable Board
+// for (let i = 0; i < board.length; i++) {
+//   // console.log(board[i])
+//   board[i].addEventListener('click', function () {
+//     if (this.innerhtml !== '') {
+//       this.innerhtml = user1
+//     }
+//   })
+// }
 
 // for (let i = 0; i < winLines[lastMove].length; i++){
 // if ($('#squareZero').hasClass('x') && $('#squareOne').hasClass('x') && $('#squareTwo').hasClass('x')) ||
@@ -108,7 +122,8 @@ return 'Continue Playing'
 // }
 
 // Says player has won, lost, or drew
-
 module.exports = {
-  user1
+  user1,
+  playerSwitch,
+  gameWin
 }
