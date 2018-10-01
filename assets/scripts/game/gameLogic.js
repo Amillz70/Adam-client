@@ -5,6 +5,7 @@
 // const user2 = 'O'
 
 const board = ['', '', '', '', '', '', '', '', '']
+const authEvents = require('../auth/events.js')
 // }
 
 // const gameStart
@@ -13,7 +14,8 @@ const board = ['', '', '', '', '', '', '', '', '']
 
 // X goes first
 //
-// clickBox
+
+// Used Bret Greensteins issue from Jun 12th
 
 let user1 = 'x'
 
@@ -44,7 +46,7 @@ const playerSwitch = function (event) {
 // Win for user1 or 'X'
 const gameWin = function (board) {
   if (board[0] !== '' && board[0] === board[1] && board[1] === board[2]) {
-    return ('Winner is ' + board[1])
+    return ('Winner is ' + board[0])
   } else if (board[3] !== '' && board[3] === board[4] && board[4] === board[5]) {
     return ('Winner is ' + board[3])
   } else if (board[6] !== '' && board[6] === board[7] && board[7] === board[8]) {
@@ -122,10 +124,12 @@ const gameWin = function (board) {
 // }
 
 // function to make game and events linked
-
+$('#squareZero').on('click', authEvents.onClickBoxZero)
 // Says player has won, lost, or drew
 module.exports = {
   user1,
   playerSwitch,
-  gameWin
+  gameWin,
+  // boardInteraction,
+  board
 }
