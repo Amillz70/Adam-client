@@ -121,6 +121,8 @@ const gameWin = function (board) {
 // for (let i = 0; i < winLines[lastMove].length; i++)
 // }
 
+// function to make game and events linked
+
 // Says player has won, lost, or drew
 module.exports = {
   user1,

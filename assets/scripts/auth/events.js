@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const gameLogic = require('../game/gameLogic.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -38,6 +39,7 @@ const onSignOut = function () {
 // Register click of individual boxes
 const onClickBoxZero = function () {
   event.preventDefault()
+  const value = $(event.target).text(gameLogic.___(index)).text()
   // console.log('skjfh;aejhf')
   api.onClickBoxZero()
     .then(ui.clickBoxZero)
