@@ -3,6 +3,7 @@
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 const authEvents = require('./auth/events.js')
+const gameLogic = require('./game/gameLogic.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -21,4 +22,7 @@ $(() => {
   $('#boxSix').on('click', () => { authEvents.onClickBox(6) })
   $('#boxSeven').on('click', () => { authEvents.onClickBox(7) })
   $('#boxEight').on('click', () => { authEvents.onClickBox(8) })
+
+  // How to link game logic with html page
+  $('#boxZero').on('click', () => { gameLogic.clickBox(0) })
 })
