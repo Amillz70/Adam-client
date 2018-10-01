@@ -6,28 +6,23 @@ A template for starting front-end projects. Webpack for `require` system, build
 pipeline, and development server. Boostrap and Handlebars.js included. No
 front-end frameworks included.
 
-## Installation
+## My Tic Tac Toe Story
+To start my journey creating a working Tic Tac Toe game I decided the best place to start would be to make the back end API. It was the most recent subject we touched on in class and the one I had the most difficulty with. I wanted to get the sign-in, sign-up, sign-out, and change password functioning before I moved onto anything else. The process for setting them up was similar to what we had done in class so it was easy enough to set up. I started off with the curl scripts for each and made sure that they worked in the terminal. From there I went into my HTML file and made a button and submit forms for each. After connecting them with proper id's and a proper class, I went on and made an event.js, 
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `Adam` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+## Technology Used
+-JavaScript
+-HTML
+-CSS
+-Bootstrap
+-JSON
+-JQuery
+-AJAX
+-DOM
+
+## Bibliography
+https://www.reddit.com/r/learnprogramming/comments/6ty6f9/javascript_tic_tac_toe_win_condition_how_to_write/ - To help decide what win condition to use.
+
+https://stackoverflow.com/questions/45777357/bootstrap-squared-columns-for-tic-tac-toe-board - To help format my bootstrap for game board.
 
 ## Structure
 

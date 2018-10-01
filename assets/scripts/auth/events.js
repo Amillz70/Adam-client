@@ -37,69 +37,77 @@ const onSignOut = function () {
     .catch(ui.signOutFailure)
 }
 
-// Register click of individual boxes
+// Register click of individual boxes, not needed to be individual
 const onClickBoxZero = function () {
   $('#squareZero').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxZero()
-    .then(ui.clickBoxZero)
-    .catch(ui.failClickZero)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxOne = function () {
   $('#squareOne').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxOne()
-    .then(ui.clickBoxOne)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxTwo = function () {
   $('#squareTwo').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxTwo()
-    .then(ui.signOutTwo)
+  api.onClickBox()
+    .then(ui.signOut)
+    .catch(ui.failClick)
 }
 
 const onClickBoxThree = function () {
   $('#squareThree').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxThree()
-    .then(ui.signOutThree)
+  api.onClickBox()
+    .then(ui.signOut)
+    .catch(ui.failClick)
 }
 
 const onClickBoxFour = function () {
   $('#squareFour').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxFour()
-    .then(ui.clickBoxFour)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxFive = function () {
   $('#squareFive').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxFive()
-    .then(ui.clickBoxFive)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxSix = function () {
   $('#squareSix').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxSix()
-    .then(ui.clickBoxSix)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxSeven = function () {
   $('#squareSeven').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxSeven()
-    .then(ui.clickBoxSeven)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 const onClickBoxEight = function () {
   $('#squareEight').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBoxEight()
-    .then(ui.clickBoxEight)
+  api.onClickBox()
+    .then(ui.clickBox)
+    .catch(ui.failClick)
 }
 
 // Need to figure out how to make this hear to start new game

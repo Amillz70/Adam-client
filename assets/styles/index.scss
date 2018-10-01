@@ -1,14 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
-
+// grey background
 body {
   background-color: #d3d3d3;
 }
 
+// made the boxes look nicer
 .content {
   margin:  10px;
   padding: 10px;
 }
 
+// make the box formated into tic tac toe
 .tic-box {
   background-color:	#00FFFF;
   border: solid #000000 1px;
@@ -16,8 +18,9 @@ body {
   text-align: center;
 }
 
+// the way to hide the sign-in, sign-out, change password, and sign-up
 // .unclickable{
 //
 // }
 
-// hover
+// didnt get to hover, but will when rest works

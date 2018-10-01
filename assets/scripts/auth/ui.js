@@ -59,11 +59,11 @@ const signOutFailure = function () {
   $('#display-message').css('color', 'red')
 }
 
-const clickBoxZero = function () {
+const clickBox = function () {
   $('#display-message').html('Next Turn')
 }
 
-const failClickZero = function () {
+const failClick = function () {
   $('#display-message').html('Turn Fail')
 }
 
@@ -100,7 +100,7 @@ module.exports = {
   gameWinsTotal,
   // oddMove,
   // evenMove,
-  clickBoxZero,
-  failClickZero,
+  clickBox,
+  failClick,
   gameOver
 }

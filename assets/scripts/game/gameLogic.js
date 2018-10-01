@@ -56,7 +56,6 @@ const gameWin = function (board) {
 // }
 // function to make game and events linked
 
-// Says player has won, lost, or drew
 module.exports = {
   playerSwitch,
   gameWin,
