@@ -124,7 +124,7 @@ const gameWin = function (board) {
 // }
 
 // function to make game and events linked
-$('#squareZero').on('click', authEvents.onClickBoxZero)
+$('#game').on('click', authEvents.onClickBoxZero)
 // Says player has won, lost, or drew
 module.exports = {
   user1,
