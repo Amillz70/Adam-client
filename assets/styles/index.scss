@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-body{
+body {
   background-color: #d3d3d3;
 }
 
@@ -10,11 +10,14 @@ body{
 }
 
 .tic-box {
+  background-color:	#00FFFF;
   border: solid #000000 1px;
-  color: transparent;
   font-size: 5vw;
   text-align: center;
-  background-color:	#00FFFF;
 }
+
+// .unclickable{
+//
+// }
 
 // hover

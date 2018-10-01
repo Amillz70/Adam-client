@@ -2,7 +2,8 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-// const gameLogic = require('../game/gameLogic.js')
+const store = require('../store.js')
+const gameLogic = require('../game/gameLogic.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -38,58 +39,65 @@ const onSignOut = function () {
 
 // Register click of individual boxes
 const onClickBoxZero = function () {
-  event.preventDefault()
-  // const value = $(event.target).text(gameLogic.___(index)).text()
-  // console.log('skjfh;aejhf')
+  $('#squareZero').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxZero()
     .then(ui.clickBoxZero)
-    // .catch(ui.failClickZero)
+    .catch(ui.failClickZero)
 }
 
 const onClickBoxOne = function () {
-  event.preventDefault()
+  $('#squareOne').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxOne()
     .then(ui.clickBoxOne)
 }
 
 const onClickBoxTwo = function () {
-  event.preventDefault()
+  $('#squareTwo').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxTwo()
     .then(ui.signOutTwo)
 }
 
 const onClickBoxThree = function () {
-  event.preventDefault()
+  $('#squareThree').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxThree()
     .then(ui.signOutThree)
 }
 
 const onClickBoxFour = function () {
-  event.preventDefault()
+  $('#squareFour').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxFour()
     .then(ui.clickBoxFour)
 }
 
 const onClickBoxFive = function () {
-  event.preventDefault()
+  $('#squareFive').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxFive()
     .then(ui.clickBoxFive)
 }
 
 const onClickBoxSix = function () {
-  event.preventDefault()
+  $('#squareSix').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxSix()
     .then(ui.clickBoxSix)
 }
 
 const onClickBoxSeven = function () {
-  event.preventDefault()
+  $('#squareSeven').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxSeven()
     .then(ui.clickBoxSeven)
 }
 
 const onClickBoxEight = function () {
-  event.preventDefault()
+  $('#squareEight').html(store.currentPlayer)
+  gameLogic.playerSwitch()
   api.onClickBoxEight()
     .then(ui.clickBoxEight)
 }

@@ -60,24 +60,32 @@ const signOutFailure = function () {
 }
 
 const clickBoxZero = function () {
-  $('#display-message').html('X moved, Os turn')
+  $('#display-message').html('Next Turn')
+}
+
+const failClickZero = function () {
+  $('#display-message').html('Turn Fail')
 }
 
 const newGameStart = function () {
   $('#display-message').html('New Game!')
 }
 
+const gameOver = function () {
+  $('#game').addClass('unclickable')
+}
+
 const gameWinsTotal = function () {
   $('#display-message').html('')
 }
 
-const oddMove = function () {
-  $('display-message').html('Xs move')
-}
-
-const evenMove = function () {
-  $('display-message').html('Os move')
-}
+// const oddMove = function () {
+//   $('display-message').html('Xs move')
+// }
+//
+// const evenMove = function () {
+//   $('display-message').html('Os move')
+// }
 
 module.exports = {
   signUpSuccess,
@@ -90,7 +98,9 @@ module.exports = {
   signOutFailure,
   newGameStart,
   gameWinsTotal,
-  oddMove,
-  evenMove,
-  clickBoxZero
+  // oddMove,
+  // evenMove,
+  clickBoxZero,
+  failClickZero,
+  gameOver
 }
