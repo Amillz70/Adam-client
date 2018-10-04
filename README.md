@@ -11,6 +11,15 @@ To start my journey creating a working Tic Tac Toe game I decided the best place
 
 Next I wanted to make a game board to visually see what was happening. I decided to use bootstrap because I wanted a challenge, have never used it before, and we were just taught it in class. I found a site on line and went off their format.
 
+## Live Link to Tic Tac Toe Game
+
+https://amillz70.github.io/Adam-client/
+
+## Link to WireFrame
+https://imgur.com/2h8a0EW
+https://imgur.com/yv1YoMw
+https://imgur.com/uU6IY8A
+
 ## Technology Used
 -JavaScript
 -HTML
