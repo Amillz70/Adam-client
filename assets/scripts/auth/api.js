@@ -39,37 +39,25 @@ const signOut = function () {
   })
 }
 
-const onClickBox = function (ID, INDEX, VALUE, OVER) {
+const onClickBox = function (gameMove) {
+  // console.log('In onClickGameAPI')
   return $.ajax({
     url: config.apiUrl + `/games/${ID}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
     method: 'PATCH',
-    data: `{
-    "game": {
-          "id" : ${ID},
-      "cell": {
-        "index": ${INDEX},
-        "value": ${VALUE}
-      },
-      "over": ${OVER}
-    }
-  }`
+    data: gameMove
   })
 }
 
 const startNewGameSuccess = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
-    method: 'POST',
-    header:
-    {Authorization: `Token token=${store.user.token}`}
+    headers:
+      {Authorization: `Token token=${store.user.token}`},
+    method: 'POST'
   })
-}
-
-const startNewGameFailure = function () {
-
 }
 
 module.exports = {
@@ -78,6 +66,5 @@ module.exports = {
   changePassword,
   signOut,
   onClickBox,
-  startNewGameSuccess,
-  startNewGameFailure
+  startNewGameSuccess
 }

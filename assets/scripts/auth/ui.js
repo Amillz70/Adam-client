@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
   store.user = response.user
+  // console.log(store.user)
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
@@ -79,6 +80,13 @@ const gameWinsTotal = function () {
   $('#display-message').html('')
 }
 
+// const startNewGameSuccess = function() {
+//
+// }
+//
+// const startNewGameFailure = function() {
+//
+// }
 // const oddMove = function () {
 //   $('display-message').html('Xs move')
 // }
@@ -103,4 +111,6 @@ module.exports = {
   clickBox,
   failClick,
   gameOver
+  // startNewGameSuccess,
+  // startNewGameFailure
 }

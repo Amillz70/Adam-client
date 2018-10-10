@@ -15,6 +15,7 @@ const onSignUp = function (event) {
 }
 
 const onSignIn = function (event) {
+  // console.log(store.user)
   event.preventDefault()
   const data = getFormFields(event.target)
   api.signIn(data)
@@ -38,10 +39,22 @@ const onSignOut = function () {
 }
 
 // Register click of individual boxes, not needed to be individual
-const onClickBoxZero = function () {
+const onClickBoxZero = function (event) {
   $('#squareZero').html(store.currentPlayer)
   gameLogic.playerSwitch()
-  api.onClickBox()
+  // console.log('Click 1 check' + event.target.id)
+  const changeIn = event.target.id
+  const gamePieces = store.currentPlayer
+  const gameMove = {
+    'game': {
+      'cell': {
+        'index': changeIn,
+        'value': gamePieces
+      },
+      'over': false
+    }
+  }
+  api.onClickBox(gameMove)
     .then(ui.clickBox)
     .catch(ui.failClick)
 }
@@ -110,11 +123,16 @@ const onClickBoxEight = function () {
     .catch(ui.failClick)
 }
 
+const currentGameData = function () {
+
+}
+
 // Need to figure out how to make this hear to start new game
-const newGameButton = function () {
+const newGameButton = function (event) {
   event.preventDefault()
+  api.startNewGameSuccess()
     .then(ui.newGameStart)
-    // .catch(ui.startNewGameFailure)
+    .catch(ui.startNewGameFailure)
 }
 
 module.exports = {
