@@ -23,7 +23,7 @@ $(() => {
   $('#squareSeven').on('click', (authEvents.onClickBoxSeven))
   $('#squareEight').on('click', (authEvents.onClickBoxEight))
 
-  $('#reset').on('click', (authEvents.newGameButton))
+  $('#reset').on('click', (authEvents.newGame))
 
   // $('#index').on('click', authEvents.onSignIn)
   // $('#create').on('click', authEvents.onSignIn)

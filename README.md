@@ -15,6 +15,18 @@ Next I wanted to make a game board to visually see what was happening. I decided
 
 https://amillz70.github.io/Adam-client/
 
+## User Stories
+As a user, I want to see when I sign in and out so that I can know if I can play the game.
+
+As a user, I want feedback when I change my password so that I know what password to use when I sign in next.
+
+As a user, I want the board to appear on sign in and disappear on sign out so that I have more visual confirmation that the play is playable or not.
+
+As a user, I want to not be able to click the board when a player wins or there is a draw so that I know when to start a new game.
+
+As a user, I want a new game to start when I click the new game button so that I can play another game!
+
+
 ## Link to WireFrame
 https://imgur.com/2h8a0EW
 https://imgur.com/yv1YoMw

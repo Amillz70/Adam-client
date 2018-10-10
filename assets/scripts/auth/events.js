@@ -128,7 +128,7 @@ const currentGameData = function () {
 }
 
 // Need to figure out how to make this hear to start new game
-const newGameButton = function (event) {
+const newGame = function (event) {
   event.preventDefault()
   api.startNewGameSuccess()
     .then(ui.newGameStart)
@@ -149,5 +149,5 @@ module.exports = {
   onClickBoxSix,
   onClickBoxSeven,
   onClickBoxEight,
-  newGameButton
+  newGame
 }

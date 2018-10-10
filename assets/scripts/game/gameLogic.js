@@ -56,10 +56,17 @@ const gameWin = function (board) {
 // }
 // function to make game and events linked
 
+const newGame = function (){
+  for (let i = 0; i < 9; i++){
+    board[i] = ''
+  }
+}
+
 module.exports = {
   playerSwitch,
   gameWin,
   // boardInteraction,
-  board
+  board,
   // hideSignOut
+  newGame
 }
