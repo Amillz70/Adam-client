@@ -25,6 +25,11 @@ $(() => {
 
   $('#reset').on('click', (authEvents.newGame))
 
+  $('#reset').hide()
+  $('#tic').hide()
+  $('#change-password-form').hide()
+  $('#sign-out-button').hide()
+
   // $('#index').on('click', authEvents.onSignIn)
   // $('#create').on('click', authEvents.onSignIn)
   // $('#show').on('click', authEvents.onSignIn)

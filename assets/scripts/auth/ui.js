@@ -16,16 +16,17 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
+  console.log('ui test')
 //  $('#squareZero').html('Sign in successful, Game start')
   $('#display-message').html('Sign in successful')
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
   store.user = response.user
-  // console.log(store.user)
-  $('#sign-up-form').addClass('hidden')
-  $('#sign-in-form').addClass('hidden')
-  $('#change-password-form').removeClass('hidden')
-  $('#sign-out-button').removeClass('hidden')
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
+  $('#change-password-form').show()
+  $('#tic').show()
+  $('#sign-out-button').show()
 }
 
 const signInFailure = function () {
@@ -53,6 +54,11 @@ const signOutSuccess = function () {
   $('#sign-in-form').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
   $('#sign-out-button').addClass('hidden')
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+  $('#change-password-form').hide()
+  $('#tic').hide()
+  $('#sign-out-button').hide()
 }
 
 const signOutFailure = function () {
@@ -79,6 +85,8 @@ const gameOver = function () {
 const gameWinsTotal = function () {
   $('#display-message').html('')
 }
+
+
 
 // const startNewGameSuccess = function() {
 //
