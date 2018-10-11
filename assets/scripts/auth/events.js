@@ -42,6 +42,7 @@ const onSignOut = function () {
 const onClickBoxZero = function (event) {
   $('#squareZero').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareZero').off()
   // console.log('Click 1 check' + event.target.id)
   const changeIn = event.target.id
   const gamePieces = store.currentPlayer
@@ -62,6 +63,7 @@ const onClickBoxZero = function (event) {
 const onClickBoxOne = function () {
   $('#squareOne').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareOne').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)
@@ -70,6 +72,7 @@ const onClickBoxOne = function () {
 const onClickBoxTwo = function () {
   $('#squareTwo').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareTwo').off()
   api.onClickBox()
     .then(ui.signOut)
     .catch(ui.failClick)
@@ -78,6 +81,7 @@ const onClickBoxTwo = function () {
 const onClickBoxThree = function () {
   $('#squareThree').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareThree').off()
   api.onClickBox()
     .then(ui.signOut)
     .catch(ui.failClick)
@@ -86,6 +90,7 @@ const onClickBoxThree = function () {
 const onClickBoxFour = function () {
   $('#squareFour').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareFour').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)
@@ -94,6 +99,7 @@ const onClickBoxFour = function () {
 const onClickBoxFive = function () {
   $('#squareFive').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareFive').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)
@@ -102,6 +108,7 @@ const onClickBoxFive = function () {
 const onClickBoxSix = function () {
   $('#squareSix').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareSix').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)
@@ -110,6 +117,7 @@ const onClickBoxSix = function () {
 const onClickBoxSeven = function () {
   $('#squareSeven').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareSeven').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)
@@ -118,6 +126,7 @@ const onClickBoxSeven = function () {
 const onClickBoxEight = function () {
   $('#squareEight').html(store.currentPlayer)
   gameLogic.playerSwitch()
+    $('#squareEight').off()
   api.onClickBox()
     .then(ui.clickBox)
     .catch(ui.failClick)

@@ -41,8 +41,9 @@ const signOut = function () {
 
 const onClickBox = function (gameMove) {
   // console.log('In onClickGameAPI')
+  console.log('api test', store.game)
   return $.ajax({
-    url: config.apiUrl + `/games/${ID}`,
+    url: config.apiUrl + `/games/${store.game.id}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },

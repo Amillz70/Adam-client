@@ -16,7 +16,6 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  console.log('ui test')
 //  $('#squareZero').html('Sign in successful, Game start')
   $('#display-message').html('Sign in successful')
   $('#display-message').css('color', 'green')
@@ -27,6 +26,7 @@ const signInSuccess = function (response) {
   $('#change-password-form').show()
   $('#tic').show()
   $('#sign-out-button').show()
+  $('#reset').show()
 }
 
 const signInFailure = function () {
@@ -59,6 +59,7 @@ const signOutSuccess = function () {
   $('#change-password-form').hide()
   $('#tic').hide()
   $('#sign-out-button').hide()
+  $('#reset').hide()
 }
 
 const signOutFailure = function () {
@@ -74,8 +75,18 @@ const failClick = function () {
   $('#display-message').html('Turn Fail')
 }
 
-const newGameStart = function () {
+const newGameStart = function (response) {
   $('#display-message').html('New Game!')
+  $('#squareZero').on('click', (authEvents.onClickBoxZero))
+  $('#squareOne').on('click', (authEvents.onClickBoxOne))
+  $('#squareTwo').on('click', (authEvents.onClickBoxTwo))
+  $('#squareThree').on('click', (authEvents.onClickBoxThree))
+  $('#squareFour').on('click', (authEvents.onClickBoxFour))
+  $('#squareFive').on('click', (authEvents.onClickBoxFive))
+  $('#squareSix').on('click', (authEvents.onClickBoxSix))
+  $('#squareSeven').on('click', (authEvents.onClickBoxSeven))
+  $('#squareEight').on('click', (authEvents.onClickBoxEight))
+  store.game = response.game
 }
 
 const gameOver = function () {
