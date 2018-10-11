@@ -13,6 +13,7 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword) // .hide()
   $('#sign-out-button').on('click', authEvents.onSignOut) // .hide()
 
+  $('#reset').on('click', (authEvents.newGame))
   $('#squareZero').on('click', (authEvents.onClickBoxZero))
   $('#squareOne').on('click', (authEvents.onClickBoxOne))
   $('#squareTwo').on('click', (authEvents.onClickBoxTwo))
@@ -22,8 +23,6 @@ $(() => {
   $('#squareSix').on('click', (authEvents.onClickBoxSix))
   $('#squareSeven').on('click', (authEvents.onClickBoxSeven))
   $('#squareEight').on('click', (authEvents.onClickBoxEight))
-
-  $('#reset').on('click', (authEvents.newGame))
 
   $('#reset').hide()
   $('#tic').hide()

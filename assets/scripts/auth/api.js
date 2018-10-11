@@ -41,7 +41,7 @@ const signOut = function () {
 
 const onClickBox = function (gameMove) {
   // console.log('In onClickGameAPI')
-  console.log('api test', store.game)
+  // console.log('api test', store.game)
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     headers: {
@@ -60,6 +60,8 @@ const startNewGameSuccess = function () {
     method: 'POST'
   })
 }
+
+
 
 module.exports = {
   signUp,

@@ -76,16 +76,16 @@ const failClick = function () {
 }
 
 const newGameStart = function (response) {
-  $('#display-message').html('New Game!')
-  $('#squareZero').on('click', (authEvents.onClickBoxZero))
-  $('#squareOne').on('click', (authEvents.onClickBoxOne))
-  $('#squareTwo').on('click', (authEvents.onClickBoxTwo))
-  $('#squareThree').on('click', (authEvents.onClickBoxThree))
-  $('#squareFour').on('click', (authEvents.onClickBoxFour))
-  $('#squareFive').on('click', (authEvents.onClickBoxFive))
-  $('#squareSix').on('click', (authEvents.onClickBoxSix))
-  $('#squareSeven').on('click', (authEvents.onClickBoxSeven))
-  $('#squareEight').on('click', (authEvents.onClickBoxEight))
+   $('#display-message').html('New Game!')
+  $('#squareZero').html('0')
+  $('#squareOne').html('1')
+  $('#squareTwo').html('2')
+  $('#squareThree').html('3')
+  $('#squareFour').html('4')
+  $('#squareFive').html('5')
+  $('#squareSix').html('6')
+  $('#squareSeven').html('7')
+  $('#squareEight').html('8')
   store.game = response.game
 }
 
