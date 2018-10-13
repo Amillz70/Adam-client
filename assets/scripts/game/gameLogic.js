@@ -13,7 +13,7 @@ const store = require('../store.js')
 store.currentPlayer = 'x'
 
 const playerSwitch = function () {
-  //  console.log('user1 is ', store.currentPlayer)
+  // console.log('user1 is ', store.currentPlayer)
   if (store.currentPlayer === 'x') {
     store.currentPlayer = 'o'
   } else {
@@ -65,17 +65,17 @@ const gameWin = function () {
 // }
 // function to make game and events linked
 
-const newGame = function (){
-  for (let i = 0; i < 9; i++){
-    board[i] = ''
-  }
-}
+// const newGame = function (){
+//   for (let i = 0; i < 9; i++){
+//     board[i] = ''
+//   }
+// }
 
 module.exports = {
   playerSwitch,
   gameWin,
   // boardInteraction,
-  board,
+  board
   // hideSignOut
-  newGame
+  // newGame
 }
