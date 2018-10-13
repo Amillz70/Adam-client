@@ -2,6 +2,7 @@
 
 const board = ['', '', '', '', '', '', '', '', '']
 const store = require('../store.js')
+// const api = require('../auth/api.js')
 // }
 
 // X goes first
@@ -54,6 +55,8 @@ const gameWin = function () {
     return 'Continue Playing'
   }
 }
+
+
 
 // function hideSignOut () {
 //   const hide = document.getElementById('sign-out-form')

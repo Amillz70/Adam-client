@@ -27,6 +27,8 @@ const signInSuccess = function (response) {
   $('#tic').show()
   $('#sign-out-button').show()
   $('#reset').show()
+  $('#count-games-button').show()
+  $('#count-game-display').show()
 }
 
 const signInFailure = function () {
@@ -60,6 +62,8 @@ const signOutSuccess = function () {
   $('#tic').hide()
   $('#sign-out-button').hide()
   $('#reset').hide()
+  $('#count-games-button').hide()
+  $('#count-game-display').hide()
 }
 
 const signOutFailure = function () {
@@ -77,15 +81,15 @@ const failClick = function () {
 
 const newGameStart = function (response) {
    $('#display-message').html('New Game!')
-  $('#squareZero').html('')
-  $('#squareOne').html('')
-  $('#squareTwo').html('')
-  $('#squareThree').html('')
-  $('#squareFour').html('')
-  $('#squareFive').html('')
-  $('#squareSix').html('')
-  $('#squareSeven').html('')
-  $('#squareEight').html('')
+  $('#squareZero').html('1')
+  $('#squareOne').html('2')
+  $('#squareTwo').html('3')
+  $('#squareThree').html('4')
+  $('#squareFour').html('5')
+  $('#squareFive').html('6')
+  $('#squareSix').html('7')
+  $('#squareSeven').html('8')
+  $('#squareEight').html('9')
   store.game = response.game
 }
 
@@ -95,6 +99,21 @@ const gameOver = function () {
 
 const gameWinsTotal = function () {
   $('#display-message').html('')
+}
+
+const gamesPlayedSuccess = function () {
+  $('#count-game-display').html(`Games Played ${store.game.id}`)
+  $('#count-games-button').html(`Games Played ${store.game.id}`)
+
+  $('#count-game-display').css('color','black')
+  $('#count-games-button').css('color','black')
+
+  $('#display-message').html(`Games Played ${store.game.id}`)
+  $('#display-message').css('color','black')
+}
+
+const gamesPlayedFailed = function () {
+  $('#count-game-display').text('Failure')
 }
 
 

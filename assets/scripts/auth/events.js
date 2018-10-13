@@ -38,33 +38,61 @@ const onSignOut = function () {
     .catch(ui.signOutFailure)
 }
 
-// Register click of individual boxes, not needed to be individual
 const onClickBox = function (event) {
-  const currentBox = event.target
-  // !== true seems to be the issue
-  if (store.game.cells[location] !== null && store.game !== undefined && store.game.over !== true) {
-    $(currentBox).html(store.currentPlayer)
-    store.game.cells[''] = store.currentPlayer
-    gameLogic.playerSwitch()
-      $(currentBox).off()
-      const gameOver = gameLogic.gameWin()
-    // console.log('Click 1 check' + event.target.id)
-    const changeIn = event.target.id
-    const gamePieces = store.currentPlayer
-    const gameMove = {
-      'game': {
-        'cell': {
-          'index': changeIn,
-          'value': gamePieces
-        },
-        'over': store.game.over
+  const currentBox = '#' + event.target.id
+  const location = $(currentBox).data('location') // retrieve a location int
+  if (store.game !== null && store.game !== undefined) { //Make sure game exists
+    if (store.game.over !== true && store.game.cells[location]) { //Game is not over and clicked on cell has not been set yet
+      $(currentBox).html(store.currentPlayer) // Set the html element to show
+      store.game.cells[location] = store.currentPlayer // Set the location in local copy of game
+      const gamePieces = store.currentPlayer // Moved above player switch so that the correct player gets sent to API
+      gameLogic.playerSwitch() // Switch players
+        // console.log('Click 1 check' + event.target.id)
+      const gameOver = gameLogic.gameWin() // Check for win
+      const gameMove = { //Prepare data to send to api
+        'game': {
+          'cell': {
+            'index': location, // put location here for correct data
+            'value': gamePieces
+          },
+          'over': store.game.over
+        }
       }
+      api.onClickBox(gameMove)
+        .then(ui.clickBox)
+        .catch(ui.failClick)
     }
-    api.onClickBox(gameMove)
-      .then(ui.clickBox)
-      .catch(ui.failClick)
   }
 }
+
+// Register click of individual boxes, not needed to be individual
+// const onClickBox = function (event) {
+//   const currentBox = event.target
+//   // !== true seems to be the issue
+//   if (store.game !== null && store.game !== undefined && store.game.over !== true) {
+//     if  (store.game.cells[event.data])
+//     $(currentBox).html(store.currentPlayer)
+//     store.game.cells[''] = store.currentPlayer
+//     gameLogic.playerSwitch()
+//       $(currentBox).off()
+//       const gameOver = gameLogic.gameWin()
+//     // console.log('Click 1 check' + event.target.id)
+//     const changeIn = event.target.id
+//     const gamePieces = store.currentPlayer
+//     const gameMove = {
+//       'game': {
+//         'cell': {
+//           'index': changeIn,
+//           'value': gamePieces
+//         },
+//         'over': store.game.over
+//       }
+//     }
+//     api.onClickBox(gameMove)
+//       .then(ui.clickBox)
+//       .catch(ui.failClick)
+//   }
+// }
 
 // const onClickBoxZero = function (event) {
 //   // !== true seems to be the issue
@@ -292,27 +320,30 @@ const onClickBox = function (event) {
 //   }
 // }
 
-const currentGameData = function () {
-
-}
 
 // Need to figure out how to make this hear to start new game
 const newGame = function (event) {
   event.preventDefault()
 
   // store.game = nil
-  // $('#squareZero').on('click', (onClickBoxZero))
-  // $('#squareOne').on('click', (onClickBoxOne))
-  // $('#squareTwo').on('click', (onClickBoxTwo))
-  // $('#squareThree').on('click', (onClickBoxThree))
-  // $('#squareFour').on('click', (onClickBoxFour))
-  // $('#squareFive').on('click', (onClickBoxFive))
-  // $('#squareSix').on('click', (onClickBoxSix))
-  // $('#squareSeven').on('click', (onClickBoxSeven))
-  // $('#squareEight').on('click', (onClickBoxEight))
+  // $('#squareZero').on('click', (onClickBox))
+  // $('#squareOne').on('click', (onClickBox))
+  // $('#squareTwo').on('click', (onClickBox))
+  // $('#squareThree').on('click', (onClickBox))
+  // $('#squareFour').on('click', (onClickBox))
+  // $('#squareFive').on('click', (onClickBox))
+  // $('#squareSix').on('click', (onClickBox))
+  // $('#squareSeven').on('click', (onClickBox))
+  // $('#squareEight').on('click', (onClickBox))
   api.startNewGameSuccess()
     .then(ui.newGameStart)
     .catch(ui.startNewGameFailure)
+}
+
+const gameCount = function (){
+  api.countGame()
+  .then(ui.gamesPlayedSuccess)
+  .catch(ui.gamesPlayedFailed)
 }
 
 module.exports = {
@@ -330,5 +361,6 @@ module.exports = {
   // onClickBoxSeven,
   // onClickBoxEight,
   newGame,
-  onClickBox
+  onClickBox,
+  gameCount
 }
