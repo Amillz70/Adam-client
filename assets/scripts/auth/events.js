@@ -42,7 +42,7 @@ const onClickBox = function (event) {
   const currentBox = '#' + event.target.id
   const location = $(currentBox).data('location') // retrieve a location int
   if (store.game !== null && store.game !== undefined) { //Make sure game exists
-    if (store.game.over !== true && store.game.cells[location]) { //Game is not over and clicked on cell has not been set yet
+    if (store.game.over !== true && store.game.cells[location] == '') { //Game is not over and clicked on cell has not been set yet
       $(currentBox).html(store.currentPlayer) // Set the html element to show
       store.game.cells[location] = store.currentPlayer // Set the location in local copy of game
       const gamePieces = store.currentPlayer // Moved above player switch so that the correct player gets sent to API
@@ -340,10 +340,16 @@ const newGame = function (event) {
     .catch(ui.startNewGameFailure)
 }
 
-const gameCount = function (){
+const gameCount = function () {
   api.countGame()
   .then(ui.gamesPlayedSuccess)
   .catch(ui.gamesPlayedFailed)
+}
+
+const gameWon = function () {
+  //api.gameWin
+  .then(ui.gameWin)
+  .catch(ui.gameMiss)
 }
 
 module.exports = {
@@ -362,5 +368,6 @@ module.exports = {
   // onClickBoxEight,
   newGame,
   onClickBox,
-  gameCount
+  gameCount,
+  gameWon
 }

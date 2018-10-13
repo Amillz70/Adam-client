@@ -81,15 +81,15 @@ const failClick = function () {
 
 const newGameStart = function (response) {
    $('#display-message').html('New Game!')
-  $('#squareZero').html('1')
-  $('#squareOne').html('2')
-  $('#squareTwo').html('3')
-  $('#squareThree').html('4')
-  $('#squareFour').html('5')
-  $('#squareFive').html('6')
-  $('#squareSix').html('7')
-  $('#squareSeven').html('8')
-  $('#squareEight').html('9')
+  $('#squareZero').html('')
+  $('#squareOne').html('')
+  $('#squareTwo').html('')
+  $('#squareThree').html('')
+  $('#squareFour').html('')
+  $('#squareFive').html('')
+  $('#squareSix').html('')
+  $('#squareSeven').html('')
+  $('#squareEight').html('')
   store.game = response.game
 }
 
@@ -97,8 +97,8 @@ const gameOver = function () {
   $('#game').addClass('unclickable')
 }
 
-const gameWinsTotal = function () {
-  $('#display-message').html('')
+const gameWin = function () {
+  $('#display-message').html('You win, game over')
 }
 
 const gamesPlayedSuccess = function () {
@@ -143,7 +143,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameStart,
-  gameWinsTotal,
+  gameWin,
   // oddMove,
   // evenMove,
   clickBox,
