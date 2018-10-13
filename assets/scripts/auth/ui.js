@@ -77,15 +77,15 @@ const failClick = function () {
 
 const newGameStart = function (response) {
    $('#display-message').html('New Game!')
-  $('#squareZero').html('0')
-  $('#squareOne').html('1')
-  $('#squareTwo').html('2')
-  $('#squareThree').html('3')
-  $('#squareFour').html('4')
-  $('#squareFive').html('5')
-  $('#squareSix').html('6')
-  $('#squareSeven').html('7')
-  $('#squareEight').html('8')
+  $('#squareZero').html('')
+  $('#squareOne').html('')
+  $('#squareTwo').html('')
+  $('#squareThree').html('')
+  $('#squareFour').html('')
+  $('#squareFive').html('')
+  $('#squareSix').html('')
+  $('#squareSeven').html('')
+  $('#squareEight').html('')
   store.game = response.game
 }
 
