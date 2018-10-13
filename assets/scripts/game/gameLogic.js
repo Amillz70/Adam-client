@@ -26,30 +26,39 @@ const gameWin = function () {
   const board = store.game.cells
   if (board[0] !== '' && board[0] === board[1] && board[1] === board[2])  {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[0])
     return ('Winner is ' + board[0])
   } else if (board[3] !== '' && board[3] === board[4] && board[4] === board[5]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[3])
     return ('Winner is ' + board[3])
   } else if (board[6] !== '' && board[6] === board[7] && board[7] === board[8]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[6])
     return ('Winner is ' + board[6])
   } else if (board[0] !== '' && board[0] === board[4] && board[4] === board[8]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[0])
     return ('Winner is ' + board[0])
   } else if (board[2] !== '' && board[2] === board[4] && board[4] === board[6]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[2])
     return ('Winner is ' + board[2])
   } else if (board[0] !== '' && board[0] === board[3] && board[3] === board[6]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[0])
     return ('Winner is ' + board[0])
   } else if (board[1] !== '' && board[1] === board[4] && board[4] === board[7]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[1])
     return ('Winner is ' + board[1])
   } else if (board[2] !== '' && board[2] === board[5] && board[5] === board[8]) {
     store.game.over = true
+    $('#display-message').text('Win for player' + ' ' + board[2])
     return ('Winner is ' + board[2])
   } else if (board.length > 9) {
     store.game.over = true
+    $('#display-message').text('Draw')
     return 'Draw'
   } else {
     return 'Continue Playing'

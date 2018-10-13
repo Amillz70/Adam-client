@@ -46,6 +46,7 @@ $(() => {
   $('#count-game-display').hide()
 
 
+
   // $('#index').on('click', authEvents.onSignIn)
   // $('#create').on('click', authEvents.onSignIn)
   // $('#show').on('click', authEvents.onSignIn)

@@ -72,7 +72,7 @@ const signOutFailure = function () {
 }
 
 const clickBox = function () {
-  $('#display-message').html('Next Turn')
+  // $('#display-message').html(`${store.currentPlayer} + Turn`)
 }
 
 const failClick = function () {
@@ -93,13 +93,14 @@ const newGameStart = function (response) {
   store.game = response.game
 }
 
-const gameOver = function () {
-  $('#game').addClass('unclickable')
-}
+// const gameOver = function () {
+//   $('#game').addClass('unclickable')
+//   $('#display-message').text(`${store.currentPlayer}` + 'wins!')
+// }
 
-const gameWin = function () {
-  $('#display-message').html('You win, game over')
-}
+// const gameWin = function () {
+//   $('#display-message').html('Player' + `${store.currentPlayer}` + 'wins')
+// }
 
 const gamesPlayedSuccess = function () {
   $('#count-game-display').html(`Games Played ${store.game.id}`)
@@ -143,12 +144,12 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameStart,
-  gameWin,
+  // gameWin,
   // oddMove,
   // evenMove,
   clickBox,
-  failClick,
-  gameOver
+  failClick
+  // gameOver
   // startNewGameSuccess,
   // startNewGameFailure
 }
