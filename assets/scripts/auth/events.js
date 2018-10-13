@@ -47,7 +47,7 @@ const onClickBox = function (event) {
     store.game.cells[''] = store.currentPlayer
     gameLogic.playerSwitch()
       $(currentBox).off()
-      const gameOver = gameLogic.gameWin()
+      store.game.over = gameLogic.gameWin()
     // console.log('Click 1 check' + event.target.id)
     const changeIn = event.target.id
     const gamePieces = store.currentPlayer
@@ -57,7 +57,7 @@ const onClickBox = function (event) {
           'index': changeIn,
           'value': gamePieces
         },
-        'over': false
+        'over': store.game.over
       }
     }
     api.onClickBox(gameMove)
@@ -299,6 +299,7 @@ const currentGameData = function () {
 // Need to figure out how to make this hear to start new game
 const newGame = function (event) {
   event.preventDefault()
+
   // store.game = nil
   // $('#squareZero').on('click', (onClickBoxZero))
   // $('#squareOne').on('click', (onClickBoxOne))
