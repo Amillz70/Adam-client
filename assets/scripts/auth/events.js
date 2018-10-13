@@ -299,7 +299,7 @@ const currentGameData = function () {
 // Need to figure out how to make this hear to start new game
 const newGame = function (event) {
   event.preventDefault()
-  store.game = nil
+  // store.game = nil
   // $('#squareZero').on('click', (onClickBoxZero))
   // $('#squareOne').on('click', (onClickBoxOne))
   // $('#squareTwo').on('click', (onClickBoxTwo))

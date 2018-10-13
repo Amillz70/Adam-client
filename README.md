@@ -9,7 +9,9 @@ front-end frameworks included.
 ## My Tic Tac Toe Story
 To start my journey creating a working Tic Tac Toe game I decided the best place to start would be to make the back end API. It was the most recent subject we touched on in class and the one I had the most difficulty with. I wanted to get the sign-in, sign-up, sign-out, and change password functioning before I moved onto anything else. The process for setting them up was similar to what we had done in class so it was easy enough to set up. I started off with the curl scripts for each and made sure that they worked in the terminal. From there I went into my HTML file and made a button and submit forms for each. After connecting them with proper id's and a proper class, I went on and made an api.js, event.js, and ui.js files. From there I connected the app.js file to the event.js file and then attached the api.js and ui.js files through the event.js file. That made me able to connect my website through the sever and gave me access to sign in, sign out, sign up, and change password.
 
-Next I wanted to make a game board to visually see what was happening. I decided to use bootstrap because I wanted a challenge, have never used it before, and we were just taught it in class. I found a site on line and went off their format.
+Next I wanted to make a game board to visually see what was happening. I decided to use bootstrap because I wanted a challenge, have never used it before, and we were just taught it in class. I found a site online and went off their format. It was easy enough to follow along and I had a game board made.
+
+From there I started on game logic for the front-end. 
 
 ## Live Link to Tic Tac Toe Game
 
