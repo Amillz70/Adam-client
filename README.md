@@ -6,6 +6,10 @@ A template for starting front-end projects. Webpack for `require` system, build
 pipeline, and development server. Boostrap and Handlebars.js included. No
 front-end frameworks included.
 
+## Live Link to Tic Tac Toe Game
+
+https://amillz70.github.io/Adam-client/
+
 ## My Tic Tac Toe Story
 To start my journey creating a working Tic Tac Toe game I decided the best place to start would be to make the back end API. It was the most recent subject we touched on in class and the one I had the most difficulty with. I wanted to get the sign-in, sign-up, sign-out, and change password functioning before I moved onto anything else. The process for setting them up was similar to what we had done in class so it was easy enough to set up. I started off with the curl scripts for each and made sure that they worked in the terminal. From there I went into my HTML file and made a button and submit forms for each. After connecting them with proper id's and a proper class, I went on and made an api.js, event.js, and ui.js files. From there I connected the app.js file to the event.js file and then attached the api.js and ui.js files through the event.js file. That made me able to connect my website through the sever and gave me access to sign in, sign out, sign up, and change password.
 
@@ -22,9 +26,6 @@ The ui.js didn't really need to be linked to my game logic because of what I put
 I then linked up the New Game button and Games Played button to go through a similar path as the game logic through the app.js, events.js, ui.js, and finally the api.js.After struggling with the game logic, hooking up these buttons wasn't nearly as challenging. The New Game needed a 'POST' request and the Games Played needed a 'GET' request. The only issue I had here was instead of showing the number of games played, for a while I was showing the id of every game. I needed to change what I was receiving from my store file and the problem was resolved.
 
 Overall this was one of the toughest challenges I've had to overcome in recent years. Most projects I've done with coding, I have been following along with someone or a program. This was the first time I was able to go off and approach the problem any way I wanted. I made a lot of mistake on the way and spent a lot of time working on features that weren't needed or didn't work, but I learned a lot from those mistakes. I feel better in my programing skill after this and look forward to adding more to this game in the future.
-## Live Link to Tic Tac Toe Game
-
-https://amillz70.github.io/Adam-client/
 
 ## User Stories
 As a user, I want to see when I sign in and out so that I can know if I can play the game.
