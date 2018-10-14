@@ -65,6 +65,7 @@ const signOutSuccess = function () {
   $('#count-games-button').hide()
   $('#count-game-display').hide()
   // $('#change-password-form').clear()
+  $('#change-password-form').trigger('reset')
 }
 
 const signOutFailure = function () {
