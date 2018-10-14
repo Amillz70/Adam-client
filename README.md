@@ -13,10 +13,15 @@ Next I wanted to make a game board to visually see what was happening. I decided
 
 From there I started on game logic for the front-end. For starters I made an array to store the cells of the board. I then linked those cells to my store function as a way of connecting the front and back end of the game. Then I made a function that would allow each click to alternate between 'x' and 'o'. From there I decided to make a game board win/lose/draw scenario. It was an if statement that ran through every possible win scenario, checked the board for them, and then continued on unless the game was won or there were no more boxes left to click.
 
-I then hooked up the logic to the back-end with nine of id click events that would allow the player to click on each square of the board. This was done in the same app.js file as the sign-in, sign-out, change-password, and sign-up app functions. 
+I then hooked up the logic to the back-end with nine of id click events that would allow the player to click on each square of the board. This was done in the same app.js file as the sign-in, sign-out, change-password, and sign-up app functions. Then I hooked it into the events.js file.
 
+In the events.js file is where most of the magic of my game happens. In here is where the game knows when the board is clicked, which square id is affected by a click, how the board is cleared when the new game button is clicked, sets the location of the board, applies the switch logic and sends which player is switched move to the api, checks for the win, and prepares to send data to api. This togther with my game logic allows the game to function.
 
-I then linked up the New Game button and Games Played button to go through a similar path as the game logic through the app.js, events.js, ui.js, and finally the api.js.
+The ui.js didn't really need to be linked to my game logic because of what I put in my events.js. What I did need to do with it was put nine different calls with empty arrays so that on new game the board would clear. Before I did this the game board would remember what squares were clicked the previous game and would make those unclickable. It took some time to figure out, but I found a way through the issue. Then I used the api.js to send a 'PATCH' request to store the game data. With that my logic for playing the game was pretty much set.
+
+I then linked up the New Game button and Games Played button to go through a similar path as the game logic through the app.js, events.js, ui.js, and finally the api.js.After struggling with the game logic, hooking up these buttons wasn't nearly as challenging. The New Game needed a 'POST' request and the Games Played needed a 'GET' request. The only issue I had here was instead of showing the number of games played, for a while I was showing the id of every game. I needed to change what I was receiving from my store file and the problem was resolved.
+
+Overall this was one of the toughest challenges I've had to overcome in recent years. Most projects I've done with coding, I have been following along with someone or a program. This was the first time I was able to go off and approach the problem any way I wanted. I made a lot of mistake on the way and spent a lot of time working on features that weren't needed or didn't work, but I learned a lot from those mistakes. I feel better in my programing skill after this and look forward to adding more to this game in the future.
 ## Live Link to Tic Tac Toe Game
 
 https://amillz70.github.io/Adam-client/
