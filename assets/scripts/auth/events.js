@@ -41,7 +41,7 @@ const onSignOut = function () {
 const onClickBox = function (event) {
   const currentBox = '#' + event.target.id
   const location = $(currentBox).data('location') // retrieve a location int
-  if (store.game !== null && store.game !== undefined) { //Make sure game exists
+  if (store.game !== null && store.game !== undefined) { // Checks for game exists
     if (store.game.over !== true && store.game.cells[location] == '') { //Game is not over and clicked on cell has not been set yet
       $(currentBox).html(store.currentPlayer) // Set the html element to show
       store.game.cells[location] = store.currentPlayer // Set the location in local copy of game

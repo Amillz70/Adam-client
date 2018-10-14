@@ -11,8 +11,12 @@ To start my journey creating a working Tic Tac Toe game I decided the best place
 
 Next I wanted to make a game board to visually see what was happening. I decided to use bootstrap because I wanted a challenge, have never used it before, and we were just taught it in class. I found a site online and went off their format. It was easy enough to follow along and I had a game board made.
 
-From there I started on game logic for the front-end. 
+From there I started on game logic for the front-end. For starters I made an array to store the cells of the board. I then linked those cells to my store function as a way of connecting the front and back end of the game. Then I made a function that would allow each click to alternate between 'x' and 'o'. From there I decided to make a game board win/lose/draw scenario. It was an if statement that ran through every possible win scenario, checked the board for them, and then continued on unless the game was won or there were no more boxes left to click.
 
+I then hooked up the logic to the back-end with nine of id click events that would allow the player to click on each square of the board. This was done in the same app.js file as the sign-in, sign-out, change-password, and sign-up app functions. 
+
+
+I then linked up the New Game button and Games Played button to go through a similar path as the game logic through the app.js, events.js, ui.js, and finally the api.js.
 ## Live Link to Tic Tac Toe Game
 
 https://amillz70.github.io/Adam-client/

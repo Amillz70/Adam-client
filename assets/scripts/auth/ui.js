@@ -64,6 +64,7 @@ const signOutSuccess = function () {
   $('#reset').hide()
   $('#count-games-button').hide()
   $('#count-game-display').hide()
+  // $('#change-password-form').clear()
 }
 
 const signOutFailure = function () {
@@ -94,9 +95,9 @@ const newGameStart = function (response) {
 }
 
 
-const gamesPlayedSuccess = function () {
+const gamesPlayedSuccess = function (response) {
   // $('#count-game-display').html(`Games Played ${store.game.id}`)
-  $('#count-games-button').html(`Games Played ${store.game.id}`)
+  $('#count-games-button').html(`Games Played ${response.games.length}`)
 
   $('#count-game-display').css('color','black')
   $('#count-games-button').css('color','black')
