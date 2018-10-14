@@ -93,28 +93,22 @@ const newGameStart = function (response) {
   store.game = response.game
 }
 
-// const gameOver = function () {
-//   $('#game').addClass('unclickable')
-//   $('#display-message').text(`${store.currentPlayer}` + 'wins!')
-// }
-
-// const gameWin = function () {
-//   $('#display-message').html('Player' + `${store.currentPlayer}` + 'wins')
-// }
 
 const gamesPlayedSuccess = function () {
-  $('#count-game-display').html(`Games Played ${store.game.id}`)
+  // $('#count-game-display').html(`Games Played ${store.game.id}`)
   $('#count-games-button').html(`Games Played ${store.game.id}`)
 
   $('#count-game-display').css('color','black')
   $('#count-games-button').css('color','black')
 
-  $('#second-display-message').html(`Games Played ${store.game.id}`)
-  $('#second-display-message').css('color','red')
+  // $('display-message').html('Games played')
+  //
+  // $('#second-display-message').html('Games Played ')
+  // $('#second-display-message').css('color','red')
 }
 
 const gamesPlayedFailed = function () {
-  $('#count-game-display').text('Failure')
+  $('#display-message').text('Failure')
 }
 
 
@@ -148,7 +142,9 @@ module.exports = {
   // oddMove,
   // evenMove,
   clickBox,
-  failClick
+  failClick,
+  gamesPlayedSuccess,
+  gamesPlayedFailed
   // gameOver
   // startNewGameSuccess,
   // startNewGameFailure

@@ -346,11 +346,6 @@ const gameCount = function () {
   .catch(ui.gamesPlayedFailed)
 }
 
-// const gameWon = function () {
-//   //api.gameWin
-//   .then(ui.gameWin)
-//   .catch(ui.gameMiss)
-// }
 
 module.exports = {
   onSignUp,
