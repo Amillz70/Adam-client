@@ -340,7 +340,8 @@ const newGame = function (event) {
     .catch(ui.startNewGameFailure)
 }
 
-const gameCount = function () {
+const gameCount = function (event) {
+  event.preventDefault
   api.countGame()
   .then(ui.gamesPlayedSuccess)
   .catch(ui.gamesPlayedFailed)

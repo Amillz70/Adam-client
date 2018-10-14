@@ -109,8 +109,8 @@ const gamesPlayedSuccess = function () {
   $('#count-game-display').css('color','black')
   $('#count-games-button').css('color','black')
 
-  $('#display-message').html(`Games Played ${store.game.id}`)
-  $('#display-message').css('color','black')
+  $('#second-display-message').html(`Games Played ${store.game.length}`)
+  $('#second-display-message').css('color','black')
 }
 
 const gamesPlayedFailed = function () {

@@ -24,6 +24,7 @@ const playerSwitch = function () {
 
 const gameWin = function () {
   const board = store.game.cells
+  console.log(store.game.cells)
   if (board[0] !== '' && board[0] === board[1] && board[1] === board[2])  {
     store.game.over = true
     $('#display-message').text('Win for player' + ' ' + board[0])
@@ -56,7 +57,7 @@ const gameWin = function () {
     store.game.over = true
     $('#display-message').text('Win for player' + ' ' + board[2])
     return ('Winner is ' + board[2])
-  } else if (board.length > 9) {
+  } else if (board.every(element => element !== '')) {
     store.game.over = true
     $('#display-message').text('Draw')
     return 'Draw'
