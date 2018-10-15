@@ -66,11 +66,13 @@ const signOutSuccess = function () {
   $('#count-game-display').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
+  $('#tic').trigger('reset')
 }
 
 const signOutFailure = function () {
   $('#display-message').html('Something went wrong, please try again')
   $('#display-message').css('color', 'red')
+  $('#change-password-form').trigger('reset')
 }
 
 const clickBox = function () {
@@ -82,7 +84,7 @@ const failClick = function () {
 }
 
 const newGameStart = function (response) {
-   $('#display-message').html('New Game!')
+  $('#display-message').html('New Game!')
   $('#squareZero').html('')
   $('#squareOne').html('')
   $('#squareTwo').html('')
